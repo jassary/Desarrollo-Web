@@ -1,64 +1,172 @@
-:root {
-    --rosa-claro: #E4CDDB;
-    --rosa-suave: #E4AECE;
-    --rosa-medio: #E590C0;
-    --rosa-intenso: #E571B2;
-    --rosa-fuerte: #E552A2;
-    --fucsia: #E63392;
-    --rosa-oscuro: #E61481;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
-body {
-    background: white;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background-color: white;
-    border-bottom: 2px solid var(--rosa-medio);
-}
-
-.logo {
-    font-size: 28px;
-    font-weight: bold;
-    color: var(--rosa-oscuro);
-}
-
-.menu a {
-    text-decoration: none;
-    color: black;
-    margin: 0 15px;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.menu a.active,
-.menu a:hover {
-    background-color: var(--rosa-suave);
-    color: black;
-}
-
-.icons {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.icons input[type="text"] {
-    padding: 8px 15px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    outline: none;
-}
+         :root {
+            --rosa-claro: #E4CDDB;
+            --rosa-suave: #E4AECE;
+            --rosa-medio: #E590C0;
+            --rosa-intenso: #E571B2;
+            --rosa-fuerte: #E552A2;
+            --fucsia: #E63392;
+            --rosa-oscuro: #E61481;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background: white;
+        }
+        
+        header.navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: white;
+            border-bottom: 2px solid var(--rosa-medio);
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--rosa-oscuro);
+        }
+        
+        .menu a {
+            text-decoration: none;
+            color: black;
+            margin: 0 15px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        
+        .menu a.active,
+        .menu a:hover {
+            background-color: var(--rosa-suave);
+            color: black;
+        }
+        
+        .icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .icons input[type="text"] {
+            padding: 8px 15px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            outline: none;
+        }
+        
+        .icon-btn {
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        main {
+            padding: 40px;
+            background-color: var(--rosa-claro);
+        }
+        
+        .products-title {
+            font-size: 24px;
+            color: var(--rosa-oscuro);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .product {
+            background-color: white;
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        .product h3 {
+            margin-top: 10px;
+            font-size: 18px;
+            color: var(--fucsia);
+        }
+        
+        .buy-button {
+            margin-top: 10px;
+            background-color: var(--rosa-intenso);
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        
+        .login-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+        
+        .login-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            width: 300px;
+            text-align: center;
+        }
+        
+        .login-content h2 {
+            color: var(--rosa-oscuro);
+            margin-bottom: 15px;
+        }
+        
+        .login-content input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        
+        .login-content button {
+            background-color: var(--rosa-intenso);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        
+        .close-btn {
+            margin-top: 10px;
+            cursor: pointer;
+            color: #888;
+            font-size: 14px;
+        }
+        
+        .welcome-message {
+            color: var(--rosa-fuerte);
+            font-weight: bold;
+        }
