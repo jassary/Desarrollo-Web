@@ -1,94 +1,111 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Glow Up</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glow Up</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<link rel="stylesheet" href="style.css">
 <body>
-    <header class="navbar">
-        <div class="logo">Glow Up</div>
-        <img src="logo.pngs" alt="logo">
-        <nav class="menu">
-            <a href="#" class="active">Make Up</a>
-            <a href="#">Skincare</a>
-            <a href="#">Hair</a>
-        </nav>
-        <div class="icons">
-            <input type="text" placeholder="Buscar...">
-            <span class="icon-btn">🔍</span>
-            <span class="icon-btn">🤍</span>
-            <span class="icon-btn" onclick="toggleLogin()">👤</span>
-            <span class="icon-btn">🛒</span>
-        </div>
-    </header>
-    <div class="login-modal" id="loginModal">
-        <div class="login-content" id="loginContent">
-            <h2 id="formTitle">Iniciar Sesión</h2>
-            <input type="email" id="email" placeholder="Correo">
-            <input type="password" id="password" placeholder="Contraseña">
-            <button onclick="submitForm()">Entrar</button>
-            <div class="close-btn" onclick="toggleLogin()">Cancelar</div>
-            <div class="close-btn" onclick="toggleForm()">¿No tienes cuenta? Regístrate</div>
-        </div>
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="Logo de Glow Up" />
     </div>
+    <nav class="menu">
+      <a href="#" class="active">Maquillaje</a>
+      <a href="#">Skincare</a>
+      <a href="#">Cuidado del cabello</a>
+    </nav>
 
-    <main>
-        <h2 class="products-title">Nuestros Productos Destacados</h2>
-        <div id="welcome" class="welcome-message" style="text-align:center;"></div>
-        <div class="product-grid">
-            <div class="product">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOmW7Ti4GpmVUKxu4kGbKSZP5wfz00o1Nm-w&s" alt="Labial Rosa">
-                <h3>Labial Rosa</h3>
-                <p>Color intenso y duradero</p>
-                <button class="buy-button">Comprar</button>
-            </div>
-            <div class="product">
-                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.launion.com.ni%2Fcrema-facial-nivea-antiarrugas-100ml%2Fp&psig=AOvVaw2nNwSPgNFpW_ZNUPtBI80T&ust=1748644756619000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCIiAvcnfyY0DFQAAAAAdAAAAABAE"
-                    alt="Crema Facial">
-                <h3>Crema Facial</h3>
-                <p>Hidratación para todo el día</p>
-                <button class="buy-button">Comprar</button>
-            </div>
-        </div>
-    </main>
+    <div class="icons">
+      <input type="text" id="searchInput" placeholder="Buscar..." />
+      <span class="icon-btn" onclick="buscarProducto()">
+        <img src="lupa.png" alt="lupa" width="30px">
+      </span>
+      <span class="icon-btn">
+        <img src="favs.png" alt="favoritos" width="30px">
+      </span>
+      <span class="icon-btn" onclick="toggleLogin()">
+        <img src="usuario.png" alt="usuario" width="30">
+      </span>
+      <span class="icon-btn">
+        <img src="compras.png" alt="compras" width="30px">
+      </span>
+    </div>
+  </header>
 
-    <script>
-        let isLogin = true;
 
-        function toggleLogin() {
-            const modal = document.getElementById('loginModal');
-            modal.style.display = modal.style.display === 'flex' ? 'none' : 'flex';
-        }
+  <div class="login-modal" id="loginModal">
+    <div class="login-content">
+      <h2 id="formTitle">Iniciar Sesión</h2>
+      <input type="email" id="email" placeholder="Correo" />
+      <input type="password" id="password" placeholder="Contraseña" />
+      <button onclick="submitForm()">Entrar</button>
+      <div class="close-btn" onclick="toggleLogin()">Cancelar</div>
+      <div class="close-btn" onclick="toggleForm()">¿No tienes cuenta? Regístrate</div>
+    </div>
+  </div>
 
-        function toggleForm() {
-            isLogin = !isLogin;
-            document.getElementById('formTitle').innerText = isLogin ? "Iniciar Sesión" : "Registrarse";
-            document.querySelector('#loginContent button').innerText = isLogin ? "Entrar" : "Registrar";
-        }
+  <main>
 
-        function submitForm() {
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
+    <section>
+        <h2 class="Eslogan">¡Te damos la bienvenida!</h2>
+        <img src="modelo.png" alt="modelo">
+    </section>
 
-            if (isLogin) {
-                const storedUser = JSON.parse(localStorage.getItem(email));
-                if (storedUser && storedUser.password === password) {
-                    document.getElementById('welcome').innerText = `¡Bienvenid@, ${email}!`;
-                    toggleLogin();
-                } else {
-                    alert("Credenciales incorrectas.");
-                }
-            } else {
-                localStorage.setItem(email, JSON.stringify({
-                    password
-                }));
-                alert("¡Registro exitoso!");
-                toggleForm();
-            }
-        }
-    </script>
+    <section>
+    <h2 class="products-title">Nuestros Productos Destacados</h2>
+    <div id="welcome" class="welcome-message" style="text-align:center;"></div>
+    <div class="product-grid">
 
+      <div class="product">
+        <img src="gloss.png" alt="Gloss ELF" />
+        <h3>Lip gloss</h3>
+        <h4>16.00$</h4>
+        <p>Marca: e.l.f.</p>
+        <p>Forma del producto: Líquido</p>
+        <button class="buy-button">Comprar</button>
+      </div>
+
+      <div class="product">
+        <img src="protector.png" alt="Protector solar" />
+        <h3>Protector solar</h3>
+        <h4>30.50$</h4>
+        <p>Hidratación para todo el día
+        <p>protección de 50v</p>
+        <button class="buy-button">Comprar</button>
+      </div>
+
+      <div class="product">
+        <img src="rubor.png" alt="rubor">
+        <h3>Rubor Rhode</h3>
+        <h4>23.00$</h4>
+      </div>
+
+      <div class="product">
+        <img src="crema.png" alt="crema">
+        <h3>Rhode tónico facial</h3>
+        <h4>40.50$</h4>
+        <button class="buy-button">Comprar</button>
+      </div>
+
+
+    </div>
+    </section>
+
+    <section>
+        <img src="modelos.png" alt="modelos" width="1510px">
+    </section>
+  </main>
+  <footer>
+    <p>Síguenos en nuestras redes sociales:</p>
+    <div class="social-links">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">TikTok</a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
