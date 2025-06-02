@@ -12,29 +12,73 @@
     <div class="logo">
       <img src="logo.png" alt="Logo de Glow Up" />
     </div>
+
     <nav class="menu">
-      <a href="#" class="active">Maquillaje</a>
-      <a href="#">Skincare</a>
-      <a href="#">Cuidado del cabello</a>
+      <div class="dropdown">
+        <a href="#">Maquillaje</a>
+        <ul class="submenu">
+          <li><a href="#">Base</a></li>
+          <li><a href="#">Corrector</a></li>
+          <li><a href="#">Polvo</a></li>
+          <li><a href="#">Rubor</a></li>
+          <li><a href="#">Bronceador</a></li>
+          <li><a href="#">Iluminador</a></li>
+          <li><a href="#">Sombra de ojos</a></li>
+          <li><a href="#">Delineador</a></li>
+          <li><a href="#">Rímel</a></li>
+          <li><a href="#">Labial</a></li>
+        </ul>
+      </div>
+
+      <div class="dropdown">
+        <a href="#">Skincare</a>
+        <ul class="submenu">
+          <li><a href="#">Limpiador</a></li>
+          <li><a href="#">Tónico</a></li>
+          <li><a href="#">Sérum</a></li>
+          <li><a href="#">Contorno de ojos</a></li>
+          <li><a href="#">Hidratante</a></li>
+          <li><a href="#">Protector solar</a></li>
+          <li><a href="#">Exfoliante</a></li>
+          <li><a href="#">Mascarilla facial</a></li>
+          <li><a href="#">Aceite facial</a></li>
+          <li><a href="#">Agua micelar</a></li>
+        </ul>
+      </div>
+
+      <div class="dropdown">
+        <a href="#">Cuidado del cabello</a>
+        <ul class="submenu">
+          <li><a href="#">Shampoo</a></li>
+          <li><a href="#">Acondicionador</a></li>
+          <li><a href="#">Mascarilla capilar</a></li>
+          <li><a href="#">Aceite capilar</a></li>
+          <li><a href="#">Protector térmico</a></li>
+          <li><a href="#">Leave-in</a></li>
+          <li><a href="#">Sérum capilar</a></li>
+          <li><a href="#">Spray fijador</a></li>
+          <li><a href="#">Exfoliante capilar</a></li>
+          <li><a href="#">Tónico capilar</a></li>
+        </ul>
+      </div>
     </nav>
 
     <div class="icons">
       <input type="text" id="searchInput" placeholder="Buscar..." />
       <span class="icon-btn" onclick="buscarProducto()">
-        <img src="lupa.png" alt="lupa" width="30px">
+        <img src="lupa.png" alt="Buscar producto" width="30px">
       </span>
       <span class="icon-btn">
-        <img src="favs.png" alt="favoritos" width="30px">
+        <img src="favs.png" alt="Favoritos" width="30px">
       </span>
       <span class="icon-btn" onclick="toggleLogin()">
-        <img src="usuario.png" alt="usuario" width="30">
+        <img src="usuario.png" alt="Iniciar sesión" width="30">
       </span>
       <span class="icon-btn">
-        <img src="compras.png" alt="compras" width="30px">
+        <img src="compras.png" alt="Carrito de compras" width="30px">
       </span>
     </div>
   </header>
-
 
   <div class="login-modal" id="loginModal">
     <div class="login-content">
@@ -50,62 +94,126 @@
   <main>
 
     <section>
-        <h2 class="Eslogan">¡Te damos la bienvenida!</h2>
-        <img src="modelo.png" alt="modelo">
+      <div class="banner">
+        <h1>Descubre Tu Belleza Interior</h1>
+        <p>Explora nuestra colección exclusiva de productos de belleza diseñados
+        para realzar tu encanto natural. Calidad premium, resultados deslumbrantes.</p>
+        <a href="#">Explorar Productos </a>
+      </div>
     </section>
 
     <section>
-    <h2 class="products-title">Nuestros Productos Destacados</h2>
-    <div id="welcome" class="welcome-message" style="text-align:center;"></div>
-    <div class="product-grid">
+      <h2 class="products-title">Nuestros Productos Destacados</h2>
+      <div id="welcome" class="welcome-message" style="text-align:center;"></div>
+      <div class="product-grid">
 
-      <div class="product">
-        <img src="gloss.png" alt="Gloss ELF" />
-        <h3>Lip gloss</h3>
-        <h4>16.00$</h4>
-        <p>Marca: e.l.f.</p>
-        <p>Forma del producto: Líquido</p>
-        <button class="buy-button">Comprar</button>
+        <div class="product">
+          <img src="gloss.png" alt="Glow Reviver Lip Oil de ELF - brillo labial" />
+          <h3>Glow Reviver Lip Oil</h3>
+          <h4>$16.00</h4>
+          <ul>
+            <li>Brillo intenso con acabado efecto "glass lips".</li>
+            <li>Contiene aceites nutritivos.</li>
+            <li>Aplicación fácil y uniforme.</li>
+            <li>Aroma a menta fresca.</li>
+            <li>Textura no pegajosa.</li>
+          </ul>
+          <button class="buy-button">Comprar</button>
+        </div>
+
+        <div class="product">
+          <img src="protector.png" alt="Protector solar SPF 50+" />
+          <h3>Protector Solar Facial Mary Kay</h3>
+          <h4>$30.50</h4>
+          <ul>
+            <li>Protección FPS 30 contra rayos UVA y UVB.</li>
+            <li>100% mineral con óxido de zinc.</li>
+            <li>Textura ligera y de rápida absorción.</li>
+            <li>Sin fragancia y no comedogénico.</li>
+            <li>Apto para todo tipo de piel.</li>
+          </ul>
+          <button class="buy-button">Comprar</button>
+        </div>
+
+        <div class="product">
+          <img src="rubor.png" alt="Rubor Rhode en tono durazno rosado">
+          <h3>Pocket blush piggy </h3>
+          <h4>$23.00</h4>
+          <ul>
+            <li>Tono rosa bebé, marca Rhode.</li>
+            <li>Textura cremosa y ligera.</li>
+            <li>Con péptidos y aceite de tamanu.</li>
+            <li>Se puede usar en mejillas y labios.</li>
+            <li>Acabado natural.</li>
+          </ul>
+          <button class="buy-button">Comprar</button>
+        </div>
+
+        <div class="product">
+          <img src="crema.png" alt="Tónico facial hidratante Rhode">
+          <h3>Escencia facial hidratante</h3>
+          <h4>$40.50</h4>
+          <ul>
+            <li>Fortalece la barrera cutánea.</li>
+            <li>Se absorbe rápidamente sin dejar residuos.</li>
+            <li>Apto para pieles sensibles. </li>
+            <li>libre de fragancias y vegano</li>
+            <li>Uso versátil.</li>
+          </ul>
+          <button class="buy-button">Comprar</button>
+        </div>
+
       </div>
+    </section>
 
-      <div class="product">
-        <img src="protector.png" alt="Protector solar" />
-        <h3>Protector solar</h3>
-        <h4>30.50$</h4>
-        <p>Hidratación para todo el día
-        <p>protección de 50v</p>
-        <button class="buy-button">Comprar</button>
-      </div>
+    <section class="seccion-modelos">
+             <div class="imagen-estilizada"><br>              
+              <h2>"Arreglarte no es vanidad, es amor propio. Maquíllate, 
+              cuídate, mírate al espejo y recuerda que mereces sentirte tan hermosa como eres por dentro."</h2><br>
+              <img src="modelos.png" alt="Modelos de ejemplo">
+             </div>
+    </section>
 
-      <div class="product">
-        <img src="rubor.png" alt="rubor">
-        <h3>Rubor Rhode</h3>
-        <h4>23.00$</h4>
-      </div>
+    <section class="suscription-section">
+  <div class="suscription-left">
+    <div class="circle-pink"></div>
+    <h2>
+      Haz parte del universo <span class="highlight">GlowUp</span><br />
+      y recibe <span class="highlight">15% de descuento</span><br />
+      en tu primera compra.
+    </h2>
+  </div>
 
-      <div class="product">
-        <img src="crema.png" alt="crema">
-        <h3>Rhode tónico facial</h3>
-        <h4>40.50$</h4>
-        <button class="buy-button">Comprar</button>
-      </div>
-
-
+  <div class="suscription-right">
+    <p>Regístrate para que conozcas nuestros productos, ofertas y lanzamientos.</p>
+    <label for="email">Correo electrónico</label>
+    <div class="form-row">
+      <input type="email" id="email" placeholder="Ingresa tu correo electrónico" />
+      <button type="submit">Suscribirme</button>
     </div>
-    </section>
+    <div class="terms">
+      <input type="checkbox" id="terms" />
+      <label for="terms">
+        He leído y acepto
+        <a href="#">Términos y condiciones</a> y
+        <a href="#">Política de privacidad</a>
+      </label>
+    </div>
+  </div>
+</section>
 
-    <section>
-        <img src="modelos.png" alt="modelos" width="1510px">
-    </section>
   </main>
-  <footer>
-    <p>Síguenos en nuestras redes sociales:</p>
-    <div class="social-links">
-      <a href="#">Instagram</a>
-      <a href="#">Facebook</a>
-      <a href="#">TikTok</a>
-    </div>
-  </footer>
+
+<footer>
+  <p class="footer-title">Síguenos en nuestras redes sociales</p>
+  <div class="social-links">
+    <a href="#" class="social-link instagram">Instagram</a>
+    <a href="#" class="social-link facebook">Facebook</a>
+    <a href="#" class="social-link tiktok">TikTok</a>
+  </div>
+</footer>
+
+
   <script src="script.js"></script>
 </body>
 </html>
